@@ -1,0 +1,10 @@
+.footer {
+    
+    text-align: left;
+    padding: 10px 20px;
+    margin-top: 40px;
+}
+.footer a {
+    color: #4a4fff;
+    text-decoration: none;
+}
