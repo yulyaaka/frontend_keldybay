@@ -239,11 +239,20 @@ li.nav_item {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  width: 80%;
-  max-width: 500px;
-  margin: 40px auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  width: 30%;
+  height: 20%;
+right: 0;
+ 
+  z-index: 1000; /* Чтобы окно было поверх других элементов */
+  top: 50%; /* Центрирование по вертикали */
+  transform: translateY(7%); /* Центрирование по вертикали */
+
 }
+
+transform: translateY(-50%); /* Центрирование по вертикали */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+z-index: 1000; /* Чтобы окно было поверх других элементов */
 
 form {
   display: flex;
@@ -263,7 +272,7 @@ label {
 
 input[type="email"],
 input[type="tel"] {
-  width: 100%;
+  width: 250px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -272,7 +281,9 @@ input[type="tel"] {
 .button-group {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+ 
+  flex-direction: column;
+  
 }
 
 .primary-button {
