@@ -15,10 +15,32 @@
     <nav class="header_nav nav">
         <ul class="nav_list">
             <li class="nav_item">For Recruiters</li>
-            <li class="nav_item">Sign Up</li>
+            <li class="nav_item"> <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button></li>
             <li class="nav_item">Log In</li>
         </ul>
     </nav>
+    <div id="id01" class="modal">
+  
+        <div class="container">
+          <label for="uname"><b>Имя пользователя</b></label>
+          <input type="text" placeholder="Введите имя пользователя" name="uname" required>
+    
+          <label for="psw"><b>Пароль</b></label>
+          <input type="password" placeholder=" Ведите пароль" name="psw" required>
+          
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Отменить</button>
+          <span class="psw">Забыли пароль?</span>
+        </div>
+      </form>
+    </div>
+
+    
 </header>
 <main class="page_content content">
     <section class="content_section main-block">
@@ -28,6 +50,7 @@
         <a href="#" class="button-primary">Join Now</a>
         <p>Looking for candidates? <a href="#">Hire now</a></p>
     </section>
+<!--
     <section class="main-image">
         <img src="img/image1.png" alt="Teamwork" style="width: 80%; max-height: 500px; object-fit: cover;">
 
@@ -43,20 +66,32 @@
     
       </div>
     </div> 
-
+--> 
 
     <section class="main-image">
-      <img src="img/image1.png" alt="Teamwork" style="width: 80%; max-height: 500px; object-fit: cover;">
-      <div class="background-gradient swiper">
+      <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <img class="candidate-img swiper-slide" src="img/image1.png" style="width: 80%; max-height: 500px; object-fit: cover;">
-          <img class="candidate-img swiper-slide" src="img/image1.png" style="width: 80%; max-height: 500px; object-fit: cover;">
-          <img class="candidate-img swiper-slide" src="img/image1.png" style="width: 80%; max-height: 500px; object-fit: cover;">
-          <img class="candidate-img swiper-slide" src="img/image1.png" style="width: 80%; max-height: 500px; object-fit: cover;">
-      
+          <div class="swiper-slide">
+            <img src="img/image1.png" alt="Teamwork" style="width: 80%; max-height: 500px; object-fit: cover;">
+          </div>
+          <div class="swiper-slide">
+            <img class="candidate-img" src="img/image1.png">
+          </div>
+          <div class="swiper-slide">
+            <img class="candidate-img" src="img/image1.png">
+          </div>
+          <div class="swiper-slide">
+            <img class="candidate-img" src="img/image1.png">
+          </div>
+          <div class="swiper-slide">
+            <img class="candidate-img" src="img/image1.png">
+          </div>
         </div>
-      </div> 
-  </section>
+      </div>
+    </section>
+    
+
+ 
 
     <section class="content_section info">
             <div class="container">
