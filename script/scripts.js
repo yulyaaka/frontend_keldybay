@@ -17,20 +17,20 @@ const facilities = {
         description: 'We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter',
     },
     facilities_4: {
-        name: '',
-        icon: '',
+        name: 'Powerful Resume',
+        icon: 'We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter',
     },
     facilities_5: {
-        name: '',
-        icon: '',
+        name: 'Powerful Resume',
+        icon: 'We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter',
     },
 }
 
 
-// Get the modal
+// js модального окна кнопки Авториз
 var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
+// нажиматие в любом месте за пределами модального меню,оно закр
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";

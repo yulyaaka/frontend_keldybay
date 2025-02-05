@@ -8,7 +8,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 40px 40px 40px 0px;
   }
   .section:nth-child(odd) {
     background-color: #ffffff;
@@ -18,7 +18,7 @@ body {
   }
   .left, .right {
     flex: 1;
-    padding: 20px;
+    
   }
   .left img {
     max-width: 100%;
@@ -134,6 +134,7 @@ body {
   }
   .feature-card {
     width: 30%;
+    text-align: left;
   }
   .feature-card h3 {
     margin-bottom: 10px;
@@ -191,7 +192,7 @@ body {
   }
 li.nav_item {
     margin-right: 20px;
-    background-color: #fdf9fb; /* Фиолетовый цвет */
+    background-color: #fdf9fb; 
     color: rgb(11, 11, 11);
     padding: 10px 15px;
     border-radius: 4px;
@@ -245,8 +246,8 @@ li.nav_item {
   width: 30%;
   height: 120%;
   right: 0;
-  z-index: 1000; /* Чтобы окно было поверх других элементов */
-  top: 50%; /* Центрирование по вертикали */
+  z-index: 1000; /* окно поверх других элементов */
+  top: 50%; /* центрирование по вертикали */
   transform: translate(500px, -370px);
 }
 
@@ -337,9 +338,6 @@ input[type="tel"] {
 }
 
 
-
-
-
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -349,7 +347,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-/* Установите стиль для всех кнопок */
+/* стиль для всех кнопок */
 button {
  
   border: none;
@@ -362,14 +360,14 @@ button:hover {
   opacity: 0.8;
 }
 
-/* Дополнительные стили для кнопки Отмена */
+/* доп стили для кнопки Отмена */
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
   background-color: #b3a09e;
 }
 
-/* Центрируйте изображение и установите кнопку Закрыть */
+/* расположение изображения(центрирование)*/
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
@@ -392,14 +390,14 @@ span.psw {
 
 /* Модальный (фон) */
 .modal {
-  display: none; /* Скрыто по умолчанию */
-  position: fixed; /* Оставаться на месте */
-  z-index: 1; /* Сидеть на вершине */
+  display: none;
+  position: fixed;
+  z-index: 1; 
   left: 0;
   top: 0;
   width: 50%; /* Полная ширина */
   height: 50%; /* Полная высота */
-  overflow: auto; /* Включите прокрутку, если это необходимо */
+  overflow: auto; 
   background-color: rgb(241, 234, 234);
   margin-top: 160px;
   margin-left: 360px;
@@ -410,11 +408,11 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% сверху, 15% снизу и по центру */
   border: 1px solid #888;
-  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  width: 80%;
 }
 
 
-
+/* Стили для прелоадера */
 .preloader {
   position: fixed;
   top: 0;
@@ -444,4 +442,10 @@ span.psw {
 .hide-preloader {
   opacity: 0;
   transition: opacity 0.5s ease-out;
+}
+/* размер картинки в слайдере */
+.candidate-img {
+  width: 80%;
+  max-height: 500px;
+  object-fit: cover;
 }
