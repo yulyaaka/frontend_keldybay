@@ -449,3 +449,12 @@ span.psw {
   max-height: 500px;
   object-fit: cover;
 }
+/* карточки расположение */
+.swiper-wrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  
+  
+}
