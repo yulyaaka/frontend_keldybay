@@ -458,3 +458,49 @@ span.psw {
   
   
 }
+
+.features-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: #eee;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.progress-indicator {
+  height: 100%;
+  background-color: #007bff;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.features {
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.features::-webkit-scrollbar {
+  display: none;
+}
+
+.feature-card {
+  flex: 0 0 300px;
+  min-width: 300px;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+}
+
+.feature-card:last-child {
+  margin-right: 0;
+}
