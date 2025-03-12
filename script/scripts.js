@@ -13,18 +13,6 @@ const cards = {
         name: 'Powerful Resume',
         description: 'We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter',
     },
-    card_4: {
-        name: 'Professional Profile',
-        description: 'We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter',
-    },
-    card_5: {
-        name: 'Best Portfolio',
-        description: 'We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter',
-    },
-    card_6: {
-        name: 'Powerful Resume',
-        description: 'We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter',
-    },
 };
 
 function renderCards() {
@@ -57,10 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCards();
     initializeScrollTracking();
 });
-
-function progress-bar() {
-    
-};
 
 // js модального окна кнопки Авториз
 var modal = document.getElementById('id01');

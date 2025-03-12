@@ -464,7 +464,10 @@ span.psw {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px, 20px, 0px, 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
 }
 
 .progress-bar {
@@ -494,11 +497,12 @@ span.psw {
   flex: 0 0 300px;
   min-width: 300px;
   margin-right: 20px;
-  padding: 20px;
+  padding: 40px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   scroll-snap-align: start;
+  margin-top: 40px;
 }
 
 .feature-card:last-child {
