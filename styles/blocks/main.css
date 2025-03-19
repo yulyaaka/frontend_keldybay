@@ -248,7 +248,7 @@ li.nav_item {
   right: 0;
   z-index: 1000; /* окно поверх других элементов */
   top: 50%; /* центрирование по вертикали */
-  transform: translate(500px, -370px);
+  transform: translate(550px, -370px);
 }
 
 
@@ -508,3 +508,5 @@ span.psw {
 .feature-card:last-child {
   margin-right: 0;
 }
+
+

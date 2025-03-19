@@ -41,6 +41,16 @@ function initializeScrollTracking() {
     });
 };
 
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     renderCards();
     initializeScrollTracking();
