@@ -15,7 +15,7 @@ const cards = {
     },
 };
 
-function renderCards() {
+function renderCards(cards) {
     const featuresContainer = document.querySelector('.features');
     Object.values(cards).forEach((cardData) => {
         const card = document.createElement('div');

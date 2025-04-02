@@ -1,0 +1,15 @@
+{
+  "name": "frontend_keldybay",
+  "version": "1.0.0",
+  "description": "Здесь ссылка на макет: https://www.figma.com/design/u1fHPkVcFOPQjcQq3ZSnmr/Web.Jobly?node-id=0-1&node-type=canvas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.8.2"
+  }
+}
