@@ -443,21 +443,25 @@ span.psw {
   opacity: 0;
   transition: opacity 0.5s ease-out;
 }
-/* размер картинки в слайдере */
+.main-image {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .candidate-img {
   width: 80%;
   max-height: 500px;
   object-fit: cover;
+  margin: 0 auto;
 }
-/* карточки расположение */
-.swiper-wrapper {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  
-  
-}
+
 
 .features-container {
   position: relative;
@@ -510,3 +514,20 @@ span.psw {
 }
 
 
+
+
+
+/*добав*/
+.active-card {
+  position: relative;
+}
+
+.active-card::before {
+  content: '';
+  position: absolute;
+  bottom: 100%; /* Полоса будет находиться над карточкой */
+  left: 0;
+  right: 0;
+  height: 4px; /* Высота полосы */
+  background-color: purple; /* Цвет полосы */
+}

@@ -28,6 +28,28 @@ function renderCards(cards) {
     });
 };
 
+/*
+function renderCards(cards) {
+    const featuresContainer = document.querySelector('.features');
+    Object.values(cards).forEach((cardData, index) => {
+    const card = document.createElement('div');
+    card.className = 'feature-card';
+    card.innerHTML = `
+    <h3>${cardData.name}</h3>
+    <p>${cardData.description}</p>
+    `;
+    // обработчик клика
+    card.addEventListener('click', () => {
+    // убрать класс active у всех карточек
+    document.querySelectorAll('.feature-card').forEach(c => c.classList.remove('active-card'));
+    // класс active к текущей карточке
+    card.classList.add('active-card');
+    });
+    featuresContainer.appendChild(card);
+    });
+    }
+*/
+
 function initializeScrollTracking() {
     const features = document.querySelector('.features');
     const progressIndicator = document.querySelector('.progress-indicator');
@@ -36,7 +58,6 @@ function initializeScrollTracking() {
         const scrollPosition = features.scrollLeft;
         const maxScroll = features.scrollWidth - features.clientWidth;
         const progressPercentage = (scrollPosition / maxScroll) * 100;
-        
         progressIndicator.style.width = `${Math.min(progressPercentage, 100)}%`;
     });
 };
@@ -46,6 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollTracking();
 });
 
+/*
+document.addEventListener('DOMContentLoaded', () => {
+    renderCards(cards); // Здесь передаем карты
+    initializeScrollTracking();
+});
+*/
 // js модального окна кнопки Авториз
 var modal = document.getElementById('id01');
 
@@ -55,3 +82,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+
+
+
