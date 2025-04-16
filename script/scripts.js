@@ -48,7 +48,11 @@ window.onclick = function(event) {
 }
 
 
-
+/* 
+fetch('https://jsonplaceholder.typecode.com/posts?_limit=3')
+.then(response => response.json())
+.then(json => console.log(json))
+*/
 
 
 
