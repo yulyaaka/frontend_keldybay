@@ -14,6 +14,46 @@ const cards = {
         description: 'We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter',
     },
 };
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.feature-card');
+  
+    // Функция для удаления активного класса у всех карточек
+    function clearActive() {
+      cards.forEach(card => card.classList.remove('active'));
+    }
+  
+    // Назначаем обработчик клика на каждую карточку
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        clearActive();
+        card.classList.add('active');
+      });
+    });
+  
+    // Можно по умолчанию сделать активной первую карточку
+    if (cards.length > 0) {
+      cards[0].classList.add('active');
+    }
+  });
+
+
+// js модального окна кнопки Авториз
+var modal = document.getElementById('id01');
+
+// нажатие в любом месте за пределами модального меню,оно закр
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+
+
+
+
 /*
 function renderCards(cards) {
     const featuresContainer = document.querySelector('.features');
@@ -73,38 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// js модального окна кнопки Авториз
-var modal = document.getElementById('id01');
-
-// нажатие в любом месте за пределами модального меню,оно закр
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.feature-card');
-
-  // Функция для удаления активного класса у всех карточек
-  function clearActive() {
-    cards.forEach(card => card.classList.remove('active'));
-  }
-
-  // Назначаем обработчик клика на каждую карточку
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      clearActive();
-      card.classList.add('active');
-    });
-  });
-
-  // Можно по умолчанию сделать активной первую карточку
-  if (cards.length > 0) {
-    cards[0].classList.add('active');
-  }
-});
