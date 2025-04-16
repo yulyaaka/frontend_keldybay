@@ -1,4 +1,4 @@
-var swiper = new Swiper (".swiper", {});
+/*var swiper = new Swiper (".swiper", {});
 
 const cards = {
     card_1: {
@@ -38,18 +38,15 @@ function renderCards(cards) {
     <h3>${cardData.name}</h3>
     <p>${cardData.description}</p>
     `;
-    // обработчик клика
     card.addEventListener('click', () => {
-    // убрать класс active у всех карточек
     document.querySelectorAll('.feature-card').forEach(c => c.classList.remove('active-card'));
-    // класс active к текущей карточке
     card.classList.add('active-card');
     });
     featuresContainer.appendChild(card);
     });
     }
 */
-
+/*
 function initializeScrollTracking() {
     const features = document.querySelector('.features');
     const progressIndicator = document.querySelector('.progress-indicator');
@@ -69,10 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /*
 document.addEventListener('DOMContentLoaded', () => {
-    renderCards(cards); // Здесь передаем карты
+    renderCards(cards); 
     initializeScrollTracking();
 });
 */
+
+
+
 // js модального окна кнопки Авториз
 var modal = document.getElementById('id01');
 
@@ -87,4 +87,24 @@ window.onclick = function(event) {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.feature-card');
 
+  // Функция для удаления активного класса у всех карточек
+  function clearActive() {
+    cards.forEach(card => card.classList.remove('active'));
+  }
+
+  // Назначаем обработчик клика на каждую карточку
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      clearActive();
+      card.classList.add('active');
+    });
+  });
+
+  // Можно по умолчанию сделать активной первую карточку
+  if (cards.length > 0) {
+    cards[0].classList.add('active');
+  }
+});

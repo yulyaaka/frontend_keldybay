@@ -443,6 +443,7 @@ span.psw {
   opacity: 0;
   transition: opacity 0.5s ease-out;
 }
+/*main*/
 .main-image {
   height: 100vh;
   display: flex;
@@ -515,19 +516,29 @@ span.psw {
 
 
 
-
-
-/*добав*/
-.active-card {
+.feature-card {
   position: relative;
+  flex: 0 0 300px;
+  min-width: 300px;
+  margin-right: 20px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  margin-top: 40px;
+  cursor: pointer; /* чтобы было понятно, что карточка кликабельна */
 }
 
-.active-card::before {
+.feature-card.active::before {
   content: '';
   position: absolute;
-  bottom: 100%; /* Полоса будет находиться над карточкой */
+  top: 0;
   left: 0;
-  right: 0;
-  height: 4px; /* Высота полосы */
-  background-color: purple; /* Цвет полосы */
+  height: 5px;
+  width: 100%;
+  background-color: rebeccapurple; /* фиолетовый цвет */
+  border-radius: 8px 8px 0 0;
 }
+
+
