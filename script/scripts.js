@@ -1,5 +1,5 @@
 /*var swiper = new Swiper (".swiper", {});*/
-
+/*
 const cards = {
     card_1: {
         name: 'Professional Profile',
@@ -13,7 +13,82 @@ const cards = {
         name: 'Powerful Resume',
         description: 'We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter',
     },
+    
 };
+*/
+
+
+//создание карточек и списка комментариев
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://jsonplaceholder.typicode.com/comments?_limit=3')
+        .then(response => {
+            if (!response.ok) throw new Error('Ошибка сети');
+            return response.json();
+        })
+        .then(comments => {
+            const cardsContainer = document.querySelector('.features-container');
+            cardsContainer.innerHTML = ''; 
+            comments.forEach((comment, index) => {
+                const card = document.createElement('div');
+                card.className = 'feature-card';
+                card.dataset.id = `card_${index + 1}`;
+                
+                card.innerHTML = `
+                    <h3>${comment.name}</h3>
+                    <p class="email">${comment.email}</p>
+                    <p>${comment.body}</p>
+                `;
+                
+                cardsContainer.appendChild(card);
+            });
+
+            initCardInteractivity(); 
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+            loadFallbackCards(); 
+        });
+
+    function initCardInteractivity() {
+        const cards = document.querySelectorAll('.feature-card');
+        
+        function clearActive() {
+            cards.forEach(card => card.classList.remove('active'));
+        }
+        
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                clearActive();
+                card.classList.add('active');
+            });
+        });
+        
+        if (cards.length > 0) {
+            cards[0].classList.add('active');
+        }
+    }
+    function loadFallbackCards() {
+        const cardsContainer = document.querySelector('.features-container');
+        cardsContainer.innerHTML = `
+            <div class="feature-card active" data-id="card_1">
+                <h3>Professional Profile</h3>
+                <p>We know finding the right job is stressful, so we've made it simple.</p>
+            </div>
+            <div class="feature-card" data-id="card_2">
+                <h3>Best Portfolio</h3>
+                <p>Create a free portfolio to show your best self.</p>
+            </div>
+            <div class="feature-card" data-id="card_3">
+                <h3>Powerful Resume</h3>
+                <p>Get discovered by recruiters with a powerful resume.</p>
+            </div>
+        `;
+        initCardInteractivity();
+    }
+});
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.feature-card');
   
@@ -46,13 +121,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
-
-/* 
-fetch('https://jsonplaceholder.typecode.com/posts?_limit=3')
-.then(response => response.json())
-.then(json => console.log(json))
-*/
 
 
 
