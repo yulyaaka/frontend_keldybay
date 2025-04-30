@@ -17,7 +17,7 @@ const cards = {
 };
 */
 
-
+/*
 //создание карточек и списка комментариев
 document.addEventListener('DOMContentLoaded', () => {
     fetch('https://jsonplaceholder.typicode.com/comments?_limit=3')
@@ -121,9 +121,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
-
-
 
 
 /*
