@@ -1,4 +1,4 @@
-// Определяем интерфейс для данных комментария
+//интерфейс
 interface Comment {
     id: number;
     name: string;
@@ -6,7 +6,6 @@ interface Comment {
     body: string;
 }
 
-// Функция для инициализации интерактивности карточек
 function initCardInteractivity(): void {
     const cards: NodeListOf<HTMLDivElement> = document.querySelectorAll('.feature-card');
     
@@ -26,29 +25,6 @@ function initCardInteractivity(): void {
     }
 }
 
-// Функция для загрузки резервных карточек
-function loadFallbackCards(): void {
-    const cardsContainer: HTMLElement | null = document.querySelector('.features-container');
-    if (!cardsContainer) return;
-    
-    cardsContainer.innerHTML = `
-        <div class="feature-card active" data-id="card_1">
-            <h3>Professional Profile</h3>
-            <p>We know finding the right job is stressful, so we've made it simple.</p>
-        </div>
-        <div class="feature-card" data-id="card_2">
-            <h3>Best Portfolio</h3>
-            <p>Create a free portfolio to show your best self.</p>
-        </div>
-        <div class="feature-card" data-id="card_3">
-            <h3>Powerful Resume</h3>
-            <p>Get discovered by recruiters with a powerful resume.</p>
-        </div>
-    `;
-    initCardInteractivity();
-}
-
-// Функция для создания карточек из данных комментариев
 function createCardsFromComments(comments: Comment[]): void {
     const cardsContainer: HTMLElement | null = document.querySelector('.features-container');
     if (!cardsContainer) return;
@@ -71,9 +47,7 @@ function createCardsFromComments(comments: Comment[]): void {
     initCardInteractivity();
 }
 
-// Основная функция загрузки данных и инициализации
 document.addEventListener('DOMContentLoaded', () => {
-    // Загрузка комментариев и создание карточек
     fetch('https://jsonplaceholder.typicode.com/comments?_limit=3')
         .then(response => {
             if (!response.ok) throw new Error('Ошибка сети');

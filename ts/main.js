@@ -1,4 +1,3 @@
-// Функция для инициализации интерактивности карточек
 function initCardInteractivity() {
     var cards = document.querySelectorAll('.feature-card');
     function clearActive() {
@@ -14,7 +13,7 @@ function initCardInteractivity() {
         cards[0].classList.add('active');
     }
 }
-// Функция для загрузки резервных карточек
+
 function loadFallbackCards() {
     var cardsContainer = document.querySelector('.features-container');
     if (!cardsContainer)
@@ -22,7 +21,7 @@ function loadFallbackCards() {
     cardsContainer.innerHTML = "\n        <div class=\"feature-card active\" data-id=\"card_1\">\n            <h3>Professional Profile</h3>\n            <p>We know finding the right job is stressful, so we've made it simple.</p>\n        </div>\n        <div class=\"feature-card\" data-id=\"card_2\">\n            <h3>Best Portfolio</h3>\n            <p>Create a free portfolio to show your best self.</p>\n        </div>\n        <div class=\"feature-card\" data-id=\"card_3\">\n            <h3>Powerful Resume</h3>\n            <p>Get discovered by recruiters with a powerful resume.</p>\n        </div>\n    ";
     initCardInteractivity();
 }
-// Функция для создания карточек из данных комментариев
+
 function createCardsFromComments(comments) {
     var cardsContainer = document.querySelector('.features-container');
     if (!cardsContainer)
@@ -37,9 +36,9 @@ function createCardsFromComments(comments) {
     });
     initCardInteractivity();
 }
-// Основная функция загрузки данных и инициализации
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Загрузка комментариев и создание карточек
+   
     fetch('https://jsonplaceholder.typicode.com/comments?_limit=3')
         .then(function (response) {
         if (!response.ok)
