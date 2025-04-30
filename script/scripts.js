@@ -110,8 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[0].classList.add('active');
     }
   });
-
-
+*/
 // js модального окна кнопки Авториз
 var modal = document.getElementById('id01');
 
