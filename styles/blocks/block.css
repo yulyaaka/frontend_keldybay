@@ -1,0 +1,33 @@
+
+  .block {
+    padding: 50px 0;
+    text-align: center;
+    justify-content: center;
+  }
+  .block-1 {
+    background-color: #ffffff;
+    color: #333;
+  }
+  .block-3 {
+    padding: 50px 0;
+    text-align: center;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: #ffffff;
+    padding-bottom: 0px;
+  }
+  .block-1 img {
+    margin: 20px 0;
+    border-radius: 50%;
+  }
+  .block-1 h2 {
+    font-size: 32px;
+    margin: 10px 0;
+  }
+  .block-2 {
+    background-color: #a55afa;
+  }
+  .block-2 h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }

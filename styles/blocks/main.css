@@ -4,96 +4,6 @@ body {
     margin: 0;
     padding: 0;
   }
-  .section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 40px 40px 0px;
-  }
-  .section:nth-child(odd) {
-    background-color: #ffffff;
-  }
-  .section:nth-child(even) {
-    background-color: #000000;
-  }
-  .left, .right {
-    flex: 1;
-    
-  }
-  .left img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .right h1 {
-    margin: 0;
-    font-size: 2em;
-    font-weight: bold;
-  }
-  .right p {
-    margin-top: 10px;
-    font-size: 1em;
-    color: #444;
-  }
-  .dark-section h2 {
-    color: #ffffff;
-    font-size: 2em;
-    margin: 0 0 15px;
-  }
-  .dark-section p {
-    color: #a9a9a9;
-    margin: 0 0 20px;
-  }
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #6d5dfc;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-  }
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .block {
-    padding: 50px 0;
-    text-align: center;
-    justify-content: center;
-  }
-  .block-1 {
-    background-color: #ffffff;
-    color: #333;
-  }
-  .block-3 {
-    padding: 50px 0;
-    text-align: center;
-    margin-left: 120px;
-    margin-right: 120px;
-    background-color: #ffffff;
-    padding-bottom: 0px;
-  }
-  .block-1 img {
-    margin: 20px 0;
-    border-radius: 50%;
-  }
-  .block-1 h2 {
-    font-size: 32px;
-    margin: 10px 0;
-  }
-  .block-2 {
-    background-color: #a55afa;
-  }
-  .block-2 h2 {
-    font-size: 26px;
-    margin-bottom: 30px;
-  }
   .content-wrapper {
     display: flex;
     justify-content: center;
@@ -113,35 +23,6 @@ body {
     height: 200px;
     background-color: #eee;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .slider {
-    margin-top: 40px;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-  }
-  .slider img {
-    width: 100px;
-    height: 100px;
-    border-radius: 4px;
-    object-fit: cover;
-  }
-  .features {
-    display: flex;
-    justify-content: center;
-    margin: 20px 55px 20px 55px;
-    gap: 40px;
-  }
-  .feature-card {
-    width: 30%;
-    text-align: left;
-  }
-  .feature-card h3 {
-    margin-bottom: 10px;
-  }
-  .feature-card p {
-    font-size: 14px;
-    color: #555;
   }
   .header {
       display: flex;
@@ -237,72 +118,6 @@ li.nav_item {
 }
 
 
-
-.content-window {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.1);
-  width: 30%;
-  height: 120%;
-  right: 0;
-  z-index: 1000; /* окно поверх других элементов */
-  top: 50%; /* центрирование по вертикали */
-  transform: translate(550px, -370px);
-}
-
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  color: #333;
-}
-
-input[type="email"],
-input[type="tel"] {
-  width: 250px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.button-group {
-  display: flex;
-  justify-content: space-between;
- 
-  flex-direction: column;
-  
-}
-
-.primary-button {
-  background-color: #7f00ff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.secondary-button {
-
-  color: rgb(14, 13, 13);
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 /* стиль для фона ч/б*/
 .main-image {
   position: relative;
@@ -411,38 +226,6 @@ span.psw {
   width: 80%;
 }
 
-
-/* Стили для прелоадера */
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-.hide-preloader {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-}
 /*main*/
 .main-image {
   height: 100vh;

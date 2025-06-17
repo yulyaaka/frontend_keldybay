@@ -1,0 +1,66 @@
+
+.content-window {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  width: 30%;
+  height: 120%;
+  right: 0;
+  z-index: 1000; /* окно поверх других элементов */
+  top: 50%; /* центрирование по вертикали */
+  transform: translate(550px, -370px);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="email"],
+input[type="tel"] {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+ 
+  flex-direction: column;
+  
+}
+
+.primary-button {
+  background-color: #7f00ff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.secondary-button {
+
+  color: rgb(14, 13, 13);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
